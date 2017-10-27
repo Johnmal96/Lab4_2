@@ -1,22 +1,27 @@
 <p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Title:</strong>
-  <%= @product.title %>
-</p>
-
-<p>
-  <strong>Description:</strong>
-  <%= @product.description %>
-</p>
-
+<table><tr>
+  <td colspan="">
+<h1>
+  <strong><%= @product.title %></strong>
+</h1>
+</td>
+<td>
 <p class="image">
-  <%= image_tag(@product.image_url, class: 'list_image' ) %>
-  </p>
-
+  <%= image_tag(@product.image_url, class: 'list_image') %>
+</p>
+</td></tr>
+<br><tr>
+<td colspan="2">
+<p>
+  
+  <%= strip_tags(@product.description) %>
+</p>
+</td>
+<td>
 <p>
   <strong>Price:</strong>
   <%= @product.price %>
 </p>
-
+</td></tr>
+</table>
 <%= link_to 'Back', products_path %>
