@@ -12,8 +12,8 @@ gem 'jbuilder'
 gem 'bcrypt'
 
 group :development, :test do
-  gem 'sqlite3', '>= 1.3.12'
-  gem 'byebug',  '>= 9.0.0', platform: :mri
+  gem 'sqlite3'
+  gem 'byebug', platform: :mri
 end
 
 group :development do
